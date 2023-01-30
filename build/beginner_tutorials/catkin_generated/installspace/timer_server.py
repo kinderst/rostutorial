@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+
+from __future__ import print_function
+
+from beginner_tutorials.srv import AddTwoInts,AddTwoIntsResponse
+from beginner_tutorials.srv import Timer
+import rospy
+
+def handle_timer(req):
+    print("Returning [%s + %s = %s]"%(req.a, req.b, (req.a + req.b)))
+    return AddTwoIntsResponse(req.a + req.b)
+
+def timer_server():
+    rospy.init_node('timer_server')
+    s = rospy.Service('timer', AddTwoInts, handle_timer)
+    print("Ready to add two ints.")
+    rospy.spin()
+
+if __name__ == "__main__":
+    timer_server()

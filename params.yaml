@@ -1,0 +1,14 @@
+rosdistro: 'noetic
+
+  '
+roslaunch:
+  uris:
+    host_robotics_two__43053: http://robotics-two:43053/
+rosversion: '1.15.15
+
+  '
+run_id: 32e73fac-a042-11ed-85a6-01462a62c26a
+turtlesim:
+  background_b: 255
+  background_g: 86
+  background_r: 50
